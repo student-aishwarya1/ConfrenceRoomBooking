@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <div class="main-heading">
+     <h1>Meeting Room Booking System</h1>
+      </div>
+<div class="main-container">
+      <div class="available-room">
+        <h2>Available-room</h2><hr>
+        <label for="cnfroom">Conference Room (Capacity:10)</label>
+        <label for="cnfroom">Meeting Room (Capacity:10)</label>
+        <label for="cnfroom">Board Room (Capacity:10)</label>
+      </div>
+
+<div class="container">
+    <h1>Meeting Booking System</h1><hr>
+    <form id="bookingForm">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="startTime">Start Time:</label>
+        <input type="time" id="startTime" name="startTime" required>
+
+        <label for="endTime">End Time:</label>
+        <input type="time" id="endTime" name="endTime" required>
+
+        <label for="roomType">Room Type:</label>
+        <select id="roomType" name="roomType">
+            <option value="conference">Conference Room</option>
+            <option value="meeting">Meeting Room</option>
+            <option value="board">Board Room</option>
+        </select>
+
+        <button type="button" onclick="addBooking()">Book Meeting</button>
+    </form>
+
+    <div class="bookings">
+        <h2>Current Bookings</h2>
+        <ul id="bookingList"></ul>
+    </div>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
